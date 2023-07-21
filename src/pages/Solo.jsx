@@ -18,7 +18,11 @@ const Solo = () => {
 
   function checkHandler(value) {
     if(currentWordId === data.current.length){
-      return ;
+      return (
+        <div>
+          <Result/>
+        </div>
+      );
     }
     if(!startCount){
       setStartCount(true); 
@@ -28,11 +32,6 @@ const Solo = () => {
       if(currentWordId === data.current.length-1){
         setStartCount(false);
         setUserInput('Finished');
-        return (
-          <div>
-            <Result/>
-          </div>
-        );
       }else{
         setUserInput(' ');
       }
